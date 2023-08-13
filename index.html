@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event commnet handeler</title>
+</head>
+<body>
+    <section id="commentContainer">
+        <h1>comment here</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia esse cum nostrum amet reiciendis consequuntur, molestiae fugit harum officiis, culpa expedita exercitationem assumenda minus placeat quis illo asperiores suscipit aperiam!2</p>
+   
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia esse cum nostrum amet reiciendis consequuntur, molestiae fugit harum officiis, culpa expedita exercitationem assumenda minus placeat quis illo asperiores suscipit aperiam!2</p>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia esse cum nostrum amet reiciendis consequuntur, molestiae fugit harum officiis, culpa expedita exercitationem assumenda minus placeat quis illo asperiores suscipit aperiam!2</p>
+    </section>
+    <textarea name="" id="commnetBox" cols="30" rows="10"></textarea><br>
+    <button id="postBtn">post here</button>
+
+    <script>
+        document.getElementById('postBtn').addEventListener('click', function(){
+        
+        const commnetBox = document.getElementById('commnetBox');
+        const commnetBoxText = commnetBox.value;
+        
+
+        const commentContainer = document.getElementById('commentContainer');
+        const p = document.createElement('p');
+        p.innerText = commnetBoxText ;
+        commentContainer.appendChild(p);
+
+        commnetBox.value = '';
+
+        })
+    </script>
+</body>
+</html>
